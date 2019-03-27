@@ -62,22 +62,76 @@ html, body {
 
 @main-color: @bombay;
 @bombay: #B0B0B5;
+@font: 'Montserrat', sans-serif;
 
 .container {
 	width: 90%;
 	max-width: 1200px;
 	margin: 5%;
-}
 
-header {
-	nav {
-		width: 100%;
-		display: flex;
-		justify-content: space-around;
-		
-		a {
-			text-decoration: none;
-			color: @main-color;
-		}
+	h1, h2, h3 {
+		font-family: @font;
 	}
-}
+
+	p {
+		font-size: 1.25rem;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2rem;
+	}
+
+	h3 {
+		font-size: 1.5rem;
+	}
+	
+	h4{
+		font-size: 1.25rem;
+	}
+
+	header {
+		nav {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			font-family: @font;
+			
+			a {
+				text-decoration: none;
+				color: @main-color;
+			} //a
+		} //nav
+	} //header
+
+	.firstHalf {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: @main-color;
+		margin: 5% 0;
+		img {
+			width: 50%;
+			height: auto;
+			padding: 5% 0% 5% 5%;
+		}
+		.firstSection {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 75%;
+			padding: 5%;
+			p {
+				a{
+					text-decoration: none;
+					color: black;
+				} //a
+			} //p	
+		}//firstSection
+	} //firstHalf
+} //container
+
