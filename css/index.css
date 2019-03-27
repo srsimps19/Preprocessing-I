@@ -193,3 +193,44 @@ body {
   text-decoration: none;
   color: black;
 }
+.container .about {
+  display: flex;
+  justify-content: space-evenly;
+}
+.container .about .skillSet {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: space-evenly;
+  width: 45%;
+}
+.container .about .skillSet ul {
+  padding: 5% 0;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+.container .about .skillSet ul li {
+  font-size: 1.25rem;
+}
+.container .about .workHistory {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.container .about .workHistory .tableHead {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5%;
+}
+.container .about .workHistory .company1 {
+  display: flex;
+  justify-content: space-between;
+}
+.container .about .workHistory .company2 {
+  display: flex;
+  justify-content: space-between;
+}
+.container .about .workHistory .company3 {
+  display: flex;
+  justify-content: space-between;
+}

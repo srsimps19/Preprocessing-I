@@ -133,5 +133,46 @@ html, body {
 			} //p	
 		}//firstSection
 	} //firstHalf
+	.about {
+		display: flex;
+		justify-content: space-evenly;
+		.skillSet {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: space-evenly;
+			width: 45%;
+			ul {
+				padding: 5% 0;
+				list-style-type: disc; 
+				list-style-position: inside;
+				li {
+					font-size: 1.25rem;
+				}   
+			} //ul
+		} //skillSet
+		.workHistory {
+			display: flex;
+			flex-direction: column;
+			width: 45%;
+			.tableHead {
+				display: flex;
+				justify-content: space-between;
+				padding-bottom: 5%;
+			}
+			.company1 {
+				display: flex;
+				justify-content: space-between;
+			}
+			.company2 {
+				display: flex;
+				justify-content: space-between;
+			}
+			.company3 {
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+	} //about
 } //container
 
