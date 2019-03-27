@@ -57,6 +57,15 @@ html, body {
 	height: 100%;
 
 }
+// mixins
+.size() {
+	font-size: 1.25rem;
+}
+
+.company() {
+	display: flex;
+	justify-content: space-between;
+} 
 
 // variables
 
@@ -74,8 +83,8 @@ html, body {
 	} //h1, h2, h3
 
 	p {
-		font-size: 1.25rem;
-	} //p
+		.size();
+	}
 
 	h1 {
 		font-size: 3rem;
@@ -90,7 +99,7 @@ html, body {
 	} //h3
 	
 	h4{
-		font-size: 1.25rem;
+		.size();
 	} //h4
 
 	header {
@@ -102,7 +111,19 @@ html, body {
 			a {
 				text-decoration: none;
 				color: @main-color;
+				@media(max-width: 500px) {
+					padding: 5%;
+					border-bottom: 1px solid @main-color;
+					width: 100%;
+					text-align: center;
+				} //@media
 			} //a
+
+			@media(max-width: 500px) {
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			} //@media
 		} //nav
 	} //header
 
@@ -136,12 +157,20 @@ html, body {
 	.about {
 		display: flex;
 		justify-content: space-evenly;
+		@media(max-width: 500px) {
+			flex-direction: column;
+			width: 100%;
+		} //@media
+
 		.skillSet {
 			display: flex;
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: space-evenly;
 			width: 45%;
+			@media(max-width: 500px) {
+				width: 100%;
+			} //@media
 			ul {
 				padding: 5% 0;
 				list-style-type: disc; 
@@ -156,25 +185,26 @@ html, body {
 			display: flex;
 			flex-direction: column;
 			width: 45%;
+			padding-bottom: 5%;
+			@media(max-width: 500px) {
+				width: 100%;
+			} //@media
 			.tableHead {
 				display: flex;
 				justify-content: space-between;
-				padding-bottom: 5%;
+				padding: 5% 0;
 			} //tableHead
 
 			.company1 {
-				display: flex;
-				justify-content: space-between;
+				.company();
 			} //company1
 
 			.company2 {
-				display: flex;
-				justify-content: space-between;
+				.company();
 			} //company2
 
 			.company3 {
-				display: flex;
-				justify-content: space-between;
+				.company();
 			} //company3
 		} //workHistory
 	} //about
@@ -193,7 +223,7 @@ html, body {
 				box-sizing: border-box;
 				margin-top: 6px; 
 				margin-bottom: 16px; 
-				resize: vertical 
+				resize: vertical; 
 			} //input, select, textarea
 
 			input[type=submit] {
@@ -205,5 +235,5 @@ html, body {
 				cursor: pointer;
 			} // type submit
 		} //form
+	} //contact
 } //container
-
